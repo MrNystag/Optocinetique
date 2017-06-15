@@ -1,3 +1,4 @@
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <SDL/SDL.h>
@@ -36,7 +37,7 @@ int main( int argc, char *argv[ ] )
     }
 
     atexit( SDL_Quit );
-    screen = SDL_SetVideoMode( 640, 432, 16, SDL_HWSURFACE ); // initialisation de l'ecran
+    screen = SDL_SetVideoMode( 640, 432, 16, SDL_HWSURFACE | SDL_FULLSCREEN ); // initialisation de l'ecran
 
     if( !screen)
     {
@@ -314,4 +315,5 @@ while( SDL_PollEvent( &event ) ){
   return EXIT_SUCCESS;
 
 }
+
 
